@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Question.css';
 import AnswerButton from '../AnswerButton';
 import MessageText from '../MessageText';
 import { Country } from '../../interfaces/Country';
@@ -32,7 +33,7 @@ class Question extends Component<Props, States> {
   render() {
     const alpha = ['A', 'B', 'C', 'D'];
     return (
-      <div>
+      <div className="Question">
         <img src={'images/nf/' + this.props.candidates[this.props.answer].english + '.png'} alt="flag" />
         <MessageText answerText={this.props.candidates[this.props.answer].japanese} isAnswered={!this.props.enable} isRight={this.state.isRight} />
         {this.props.candidates.map((v, index) => (
