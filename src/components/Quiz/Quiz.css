@@ -1,0 +1,15 @@
+.NextButton {
+  text-align: center;
+  margin: 10px;
+}
+.NextButton button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 3px;
+  background: #eee;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.NextButton button:enabled:hover {
+  background: #ddd;
+}
