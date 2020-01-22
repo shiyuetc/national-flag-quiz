@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './MessageText.css'
+import './MessageText.css';
 
 interface Props {
   answerText: string,
@@ -16,9 +16,9 @@ class MessageText extends Component<Props> {
             return <p className="Default">Q.この国旗の国名は？</p>
           } else {
             if (this.props.isRight) {
-              return <p className="Right">正解です。<br />正解は{this.props.answerText}でした。</p>
+              return <p className="Right">正解！<br />正解は{this.props.answerText}でした。</p>
             } else {
-              return <p className="Wrong">不正解です。<br />正解は{this.props.answerText}でした。</p>
+              return <p className="Wrong">不正解！<br />正解は{this.props.answerText}でした。</p>
             }
           }
         })()}
