@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import './AnswerButton.css';
 
 interface Props {
   code: string,
-  buttonText: string,
-  outerText: string,
+  text: string,
   handleClick: Function,
   disabled?: boolean
 }
@@ -21,7 +21,7 @@ class AnswerButton extends Component<Props> {
   render() {
     return (
       <div className="AnswerButton">
-        <button onClick={this.handleClick} disabled={this.props.disabled}>{this.props.buttonText}</button>&nbsp;{this.props.outerText}
+        <button onClick={this.handleClick} disabled={this.props.disabled}>{this.props.text}</button>
       </div>
     );
   }

@@ -31,13 +31,12 @@ class Question extends Component<Props, States> {
   }
 
   render() {
-    const alpha = ['A', 'B', 'C', 'D'];
     return (
       <div className="Question">
         <img src={'images/nf/' + this.props.candidates[this.props.answer].english + '.png'} alt="flag" />
         <MessageText answerText={this.props.candidates[this.props.answer].japanese} isAnswered={!this.props.enable} isRight={this.state.isRight} />
         {this.props.candidates.map((v, index) => (
-          <AnswerButton key={index} code={v.code} buttonText={alpha[index]} outerText={v.japanese} handleClick={this.handleClick} disabled={!this.props.enable} />
+          <AnswerButton key={index} code={v.code} text={v.japanese} handleClick={this.handleClick} disabled={!this.props.enable} />
         ))}
       </div>
     );
