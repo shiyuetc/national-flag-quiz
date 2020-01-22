@@ -1,0 +1,16 @@
+.MessageText p {
+  margin: 0 0 12px 0;
+  padding: 8px;
+  font-size: 14px;
+}
+.MessageText .Default {
+  background: #eee;
+}
+.MessageText .Right {
+  color: #4f8a10;
+  background: #dff2bf;
+}
+.MessageText .Wrong {
+  color: #d8000c;
+  background: #ffd2d2;
+}
