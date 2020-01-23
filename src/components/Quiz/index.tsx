@@ -11,7 +11,7 @@ interface Props {
 interface States {
   questionCount: number,
   rightCount: number,
-  wrongCount: number,
+  answerRate: number,
   questionData: QuestionData
 }
 
@@ -21,41 +21,44 @@ class Quiz extends Component<Props, States> {
     this.state = {
       questionCount: 1,
       rightCount: 0,
-      wrongCount: 0,
+      answerRate: 0,
       questionData: new QuestionData(this.props.countries.length)
     };
     this.answerResponse = this.answerResponse.bind(this);
   }
 
   answerResponse(result: boolean) {
-    this.state.questionData.disabled()
+    this.state.questionData.disabled();
     if (result) {
-      this.setState({ rightCount: this.state.rightCount + 1 })
+      this.setState({ 
+        questionCount: this.state.questionCount + 1,
+        rightCount: this.state.rightCount + 1,
+        answerRate: Math.floor((this.state.rightCount + 1) / this.state.questionCount * 100)
+      });
     } else {
-      this.setState({ wrongCount: this.state.wrongCount + 1 })
+      this.setState({ 
+        questionCount: this.state.questionCount + 1,
+        answerRate: Math.floor(this.state.rightCount / this.state.questionCount * 100)
+      });
     }
-  }
-
-  next() {
-    this.setState({
-      questionCount: this.state.questionCount + 1,
-      questionData: new QuestionData(this.props.countries.length)
-    })
   }
 
   render() {
     return (
       <>
+        <div className="StatusText">
+          正答数：{this.state.questionCount - 1}問中{this.state.rightCount}問 ({this.state.answerRate}%)
+        </div>
         <Question enable={this.state.questionData.enable}
           answer={this.state.questionData.answer} candidates={[
-          this.props.countries[this.state.questionData.candidateIndex[0]],
-          this.props.countries[this.state.questionData.candidateIndex[1]],
-          this.props.countries[this.state.questionData.candidateIndex[2]],
-          this.props.countries[this.state.questionData.candidateIndex[3]]]}
+            this.props.countries[this.state.questionData.candidateIndex[0]],
+            this.props.countries[this.state.questionData.candidateIndex[1]],
+            this.props.countries[this.state.questionData.candidateIndex[2]],
+            this.props.countries[this.state.questionData.candidateIndex[3]]]}
           answerResponse={this.answerResponse} />
-          <div className="NextButton">
-            <button onClick={() => this.next()}>次の問題</button>
-          </div>
+        <div className="NextButton">
+          <button onClick={() => this.setState({ questionData: new QuestionData(this.props.countries.length) })}>次の問題</button>
+        </div>
       </>
     );
   }

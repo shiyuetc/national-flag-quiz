@@ -1,3 +1,7 @@
+.StatusText {
+  margin: 2px 4px;
+  font-size: 14px;
+}
 .NextButton {
   text-align: center;
   margin: 10px;
