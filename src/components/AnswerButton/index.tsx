@@ -4,8 +4,7 @@ import './AnswerButton.css';
 interface Props {
   code: string,
   text: string,
-  handleClick: Function,
-  disabled?: boolean
+  handleClick: Function
 }
 
 class AnswerButton extends Component<Props> {
@@ -21,7 +20,7 @@ class AnswerButton extends Component<Props> {
   render() {
     return (
       <div className="AnswerButton">
-        <button onClick={this.handleClick} disabled={this.props.disabled}>{this.props.text}</button>
+        <button onClick={this.handleClick}>{this.props.text}</button>
       </div>
     );
   }

@@ -14,6 +14,6 @@
 .AnswerButton button:enabled:hover {
   background: #ddd;
 }
-.AnswerButton button:disabled {
-  cursor: default;
+.AnswerButton button:focus {
+  background: #ddd;
 }
