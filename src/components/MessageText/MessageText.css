@@ -1,6 +1,6 @@
 .MessageText p {
   margin: 0 0 12px 0;
-  padding: 8px;
+  padding: 8px 6px;
   font-size: 14px;
 }
 .MessageText .Default {
@@ -13,4 +13,7 @@
 .MessageText .Wrong {
   color: #d8000c;
   background: #ffd2d2;
+}
+.MessageText span {
+  font-weight: bold;
 }

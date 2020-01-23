@@ -45,7 +45,7 @@ class Quiz extends Component<Props, States> {
 
   render() {
     return (
-      <div>
+      <>
         <Question enable={this.state.questionData.enable}
           answer={this.state.questionData.answer} candidates={[
           this.props.countries[this.state.questionData.candidateIndex[0]],
@@ -56,7 +56,7 @@ class Quiz extends Component<Props, States> {
           <div className="NextButton">
             <button onClick={() => this.next()}>次の問題</button>
           </div>
-      </div>
+      </>
     );
   }
 }
