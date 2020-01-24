@@ -7,7 +7,12 @@ export class QuestionData {
   constructor(countryCount: number) {
     this.answer = Math.floor(Math.random() * 4);
     for (var i = 0; i < 4; i++) {
-      this.candidateIndex[i] = Math.floor(Math.random() * countryCount);
+      var rand = Math.floor(Math.random() * countryCount);
+      if(!this.candidateIndex.includes(rand)) {
+        this.candidateIndex[i] = rand;
+      } else {
+        i--;
+      }
     }
     this.enable = true;
   }
