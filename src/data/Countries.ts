@@ -1,6 +1,6 @@
 import { Country } from '../interfaces/Country';
 
-export const Countries: Country[] = [
+export const Countries: Array<Country> = [
   { code: '352', japanese: 'アイスランド', english: 'iceland' },
   { code: '372', japanese: 'アイルランド', english: 'ireland' },
   { code: '031', japanese: 'アゼルバイジャン', english: 'azerbaijan' },
@@ -91,7 +91,7 @@ export const Countries: Country[] = [
   { code: '226', japanese: '赤道ギニア', english: 'equatorial-guinea' },
   { code: '686', japanese: 'セネガル', english: 'senegal' },
   { code: '688', japanese: 'セルビア', english: 'serbia' },
-  { code: '659', japanese: 'セントクリストファー・ネビス', english: 'saint-kitts-and-nevis' },
+  { code: '659', japanese: 'セントクリストファー・ネイビス', english: 'saint-kitts-and-nevis' },
   { code: '670', japanese: 'セントビンセント・グレナディーン', english: 'saint-vincent-and-the-grenadines' },
   { code: '662', japanese: 'セントルシア', english: 'saint-lucia' },
   { code: '706', japanese: 'ソマリア', english: 'somalia' },
