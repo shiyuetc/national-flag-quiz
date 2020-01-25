@@ -1,0 +1,13 @@
+.CheckBoxList {
+  padding: 0 0 6px 4px;
+  border-bottom: 2px solid #aeaea9;
+  font-size: 14px;
+}
+
+input[type=checkbox] {
+  width: 10px;
+  height: 10px;
+  -moz-transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
