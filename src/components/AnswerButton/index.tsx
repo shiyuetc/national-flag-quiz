@@ -19,7 +19,7 @@ class AnswerButton extends Component<Props> {
   
   render() {
     return (
-      <div className="AnswerButton">
+      <div className="ButtonBlock AnswerButton">
         <button onClick={this.handleClick}>{this.props.text}</button>
       </div>
     );

@@ -1,19 +1,8 @@
 .AnswerButton {
   margin: 10px;
 }
+
 .AnswerButton button {
   width: 100%;
   padding: 8px 6px;
-  border: none;
-  border-radius: 3px;
-  background: #eee;
-  font-size: 14px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.AnswerButton button:enabled:hover {
-  background: #ddd;
-}
-.AnswerButton button:focus {
-  background: #ddd;
 }

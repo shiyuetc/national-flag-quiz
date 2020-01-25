@@ -1,20 +1,33 @@
-.StatusText {
-  margin: 2px 4px;
-  font-size: 14px;
+.Header {
+  position: relative;
+  border-bottom: 2px solid #aeaea9;
 }
-.NextButton {
+
+.Title {
+  margin: 0;
+  padding: 4px 6px;
   text-align: center;
+  font-size: 16px;
+}
+
+.ToggleButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-left: 2px solid #aeaea9;
+}
+
+.ToggleButton button {
+  height: 100%;
+  padding: 0 12px;
+  border-radius: 0;
+}
+
+.NextButton {
   margin: 10px;
 }
+
 .NextButton button {
   padding: 8px 18px;
-  border: none;
-  border-radius: 3px;
-  background: #eee;
-  font-size: 14px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.NextButton button:enabled:hover {
-  background: #ddd;
 }

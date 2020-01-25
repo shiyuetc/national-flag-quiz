@@ -5,17 +5,21 @@
   border-top: 2px solid #aeaea9;
   border-bottom: 2px solid #aeaea9;
 }
+
 .MessageText .Default {
   background: #eee;
 }
+
 .MessageText .Right {
   color: #4f8a10;
   background: #dff2bf;
 }
+
 .MessageText .Wrong {
   color: #d8000c;
   background: #ffd2d2;
 }
+
 .MessageText span {
   font-weight: bold;
 }

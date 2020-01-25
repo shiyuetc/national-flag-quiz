@@ -10,3 +10,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+p.SubText {
+  margin: 2px 4px;
+  font-size: 14px;
+}
+
+.ButtonBlock {
+  text-align: center;
+}
+
+.ButtonBlock button {
+  border: none;
+  border-radius: 3px;
+  background: #eee;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.ButtonBlock button:enabled:hover {
+  background: #ddd;
+}
+
+.ButtonBlock button:focus {
+  background: #ddd;
+}
