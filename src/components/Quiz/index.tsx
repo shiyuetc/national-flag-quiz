@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Quiz.css';
+import { QuestionData } from '../../helpers/QuestionData';
 import { Country } from '../../interfaces/Country';
-import { QuestionData } from '../../interfaces/QuestionData';
 import Question from '../Question';
 import SettingForm from '../SettingForm';
 
