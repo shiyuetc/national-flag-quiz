@@ -1,14 +1,13 @@
 import React from 'react';
 import './App.css';
 import Quiz from './components/Quiz';
-import { Countries } from './data/Countries';
+import { AreaGroups } from './data/AreaGroups';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <div className="Content">
-        <h2 className="Title">国旗当てクイズ</h2>
-        <Quiz countries={Countries}/>
+        <Quiz areaGroups={AreaGroups}/>
       </div>
     </div>
   );
